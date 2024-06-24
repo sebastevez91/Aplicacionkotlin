@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_materias">
+        <item>Matemáticas</item>
+        <item>Ciencias Sociales</item>
+        <item>Lengua</item>
+        <item>Ingles</item>
+    </string-array>
+    <string-array name="spinner_llamados">
+        <item>Llamado Uno</item>
+        <item>Llamado Dos</item>
+        <item>Llamado Tres</item>
+        <item>Llamado Cuatro</item>
+    </string-array>
+    <string-array name="spinner_tipoDni">
+        <item>Cédula</item>
+        <item>Documento nacional</item>
+        <item>Pasaporte</item>
+    </string-array>
+</resources>
