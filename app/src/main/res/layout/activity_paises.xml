@@ -17,7 +17,8 @@
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"/>
 
     <TextView
         android:id="@+id/idTitlePais"
@@ -26,19 +27,21 @@
         android:text="Paises:"
         android:textColor="@color/white"
         android:textSize="25sp"
-        app:layout_constraintEnd_toStartOf="@+id/listPaises"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="111dp" />
+        app:layout_constraintTop_toBottomOf="@+id/idTittleApi"
+        android:layout_marginTop="16dp"/>
 
     <Spinner
         android:id="@+id/listPaises"
-        android:layout_width="218dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="52dp"
-        app:layout_constraintBottom_toTopOf="@+id/listCapitales"
+        android:layout_width="307dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idTittleApi"
-        app:layout_constraintVertical_bias="0.617" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitlePais" />
 
     <TextView
         android:id="@+id/idTitleCapitales"
@@ -47,30 +50,34 @@
         android:text="Capital:"
         android:textColor="@color/white"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/infoPais"
-        app:layout_constraintEnd_toStartOf="@+id/listCapitales"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idTitlePais" />
+        app:layout_constraintTop_toBottomOf="@+id/listPaises"
+        android:layout_marginTop="16dp"/>
 
     <Spinner
         android:id="@+id/listCapitales"
-        android:layout_width="211dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="307dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitleCapitales" />
 
     <TextView
         android:id="@+id/infoPais"
-        android:layout_width="347dp"
-        android:layout_height="224dp"
+        android:layout_width="310dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
         android:text="Información: "
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/listCapitales" />
 
     <Button
         android:id="@+id/btnVolverInicio"
@@ -83,5 +90,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infoPais" />
+        app:layout_constraintTop_toBottomOf="@+id/infoPais"
+        android:layout_marginTop="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

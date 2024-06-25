@@ -9,82 +9,109 @@
     android:background="@mipmap/fondokotlin"
     tools:context=".PerfilActivity">
 
-    <EditText
-        android:id="@+id/Nombre"
-        android:layout_width="334dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="72dp"
-        android:hint="Aqui va tu nombre"
+    <TextView
+        android:id="@+id/idTittlePerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos de Perfil"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"/>
 
     <EditText
-        android:id="@+id/numDni"
-        android:layout_width="335dp"
+        android:id="@+id/Nombre"
+        android:layout_width="331dp"
         android:layout_height="48dp"
-        android:hint="Aqui va tu número de DNI"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Aquí va tu nombre"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TipoDni"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/BtnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="68dp"
         android:backgroundTint="@color/blue"
         android:text="Guardar Cambios"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numDni"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/etDate"
-        android:layout_width="343dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="32dp"
-        android:focusable="false"
-        android:hint="Selecciona la fecha de nacimiento"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/TipoDni"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Apellido"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/numDni" />
 
     <Spinner
         android:id="@+id/TipoDni"
-        android:layout_width="330dp"
-        android:layout_height="37dp"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
         android:entries="@array/spinner_tipoDni"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="396dp" />
+        app:layout_constraintTop_toBottomOf="@+id/etDate" />
 
     <EditText
-        android:id="@+id/Apellido"
-        android:layout_width="342dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="36dp"
-        android:hint="Aqui va tu apellido"
+        android:id="@+id/etDate"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:focusable="false"
+        android:hint="Selecciona la fecha de nacimiento"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Apellido" />
+
+    <EditText
+        android:id="@+id/numDni"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Aquí va tu número de DNI"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TipoDni" />
+
+    <EditText
+        android:id="@+id/Apellido"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Aquí va tu apellido"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nombre" />
 
+    <Button
+        android:id="@+id/btnVolverInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/blue"
+        android:text="Volver a la pagina inicio"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+

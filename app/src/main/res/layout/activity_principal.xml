@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Bienvenido a la School App"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,17 +38,28 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/idMenuMain"
-        android:layout_width="382dp"
-        android:layout_height="198dp"
-        android:layout_marginBottom="128dp"
-        android:background="@color/greenWhite"
+        android:layout_width="328dp"
+        android:layout_height="189dp"
+        android:layout_marginBottom="124dp"
+        app:itemTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemTextColor="@color/black"
         app:menu="@menu/menu_principal"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btnVolverInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/blue"
+        android:text="Volver a la pagina inicio"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

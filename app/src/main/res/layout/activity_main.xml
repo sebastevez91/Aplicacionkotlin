@@ -14,20 +14,21 @@
 
     <ImageView
         android:id="@+id/coverImageView"
-        android:layout_width="183dp"
-        android:layout_height="163dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="220dp"
+        android:layout_height="209dp"
         android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        app:srcCompat="@mipmap/logo" />
+        app:srcCompat="@mipmap/logotrans" />
 
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre de usuario"
+        android:textAlignment="center"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -44,7 +45,8 @@
         android:minWidth="200dp"
         android:hint="Contraseña"
         android:textColorHint="@color/white"
-        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:importantForAutofill="no"
         tools:ignore="HardcodedText,VisualLintTextFieldSize" />

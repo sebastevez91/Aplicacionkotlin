@@ -30,20 +30,19 @@
         android:text="Lista de materias:"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/listMaterias"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idTitleInsc" />
 
     <Spinner
         android:id="@+id/listMaterias"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="323dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
         android:entries="@array/spinner_materias"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/titleMaterias"
-        app:layout_constraintTop_toBottomOf="@+id/idTitleInsc" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMaterias" />
 
     <TextView
         android:id="@+id/textView2"
@@ -53,24 +52,23 @@
         android:text="LLamados:"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/listLlamados"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleMaterias" />
+        app:layout_constraintTop_toBottomOf="@+id/listMaterias" />
 
     <Spinner
         android:id="@+id/listLlamados"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="323dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
         android:entries="@array/spinner_llamados"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/listMaterias" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/Descripcion"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Datos de la inscripción"
@@ -85,12 +83,13 @@
         android:id="@+id/buttonSend"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="264dp"
         android:backgroundTint="@color/blue"
         android:text="Enviar incripción"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Descripcion" />
 
@@ -98,15 +97,19 @@
         android:id="@+id/btnVolInicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
         android:text="Volver a la pagina inicio"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSend" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 
