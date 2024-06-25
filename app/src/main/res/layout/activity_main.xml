@@ -9,13 +9,15 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity"
+    android:gravity="center_horizontal"
     tools:ignore="ExtraText">
-
 
     <ImageView
         android:id="@+id/coverImageView"
         android:layout_width="183dp"
         android:layout_height="163dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
@@ -32,7 +34,6 @@
         android:minWidth="200dp"
         android:minHeight="48dp"
         tools:ignore="Autofill,HardcodedText,TextContrastCheck,TextFields,VisualLintTextFieldSize" />
-
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -78,8 +79,7 @@
         android:layout_marginTop="16dp"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@android:color/white"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/linkRegistrar"
@@ -93,13 +93,10 @@
 
     <CheckBox
         android:id="@+id/checkboxSession"
-        android:layout_width="376dp"
-        android:layout_height="71dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Mantener la sesión abierta"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="left" />
 
 </LinearLayout>

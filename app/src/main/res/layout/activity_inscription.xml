@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/idTitleInsc"
-        android:layout_width="259dp"
-        android:layout_height="42dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="Inscripción a examen"
         android:textAlignment="center"
@@ -19,7 +19,6 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,89 +26,87 @@
         android:id="@+id/titleMaterias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="24dp"
         android:text="Lista de materias:"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/listMaterias"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitleInsc" />
+
+    <Spinner
+        android:id="@+id/listMaterias"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/spinner_materias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/titleMaterias"
         app:layout_constraintTop_toBottomOf="@+id/idTitleInsc" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="LLamados:"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/Descripcion"
         app:layout_constraintEnd_toStartOf="@+id/listLlamados"
-        app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleMaterias"
-        app:layout_constraintVertical_bias="0.245" />
-
-    <Spinner
-        android:id="@+id/listMaterias"
-        android:layout_width="156dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="36dp"
-        android:entries="@array/spinner_materias"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="135dp" />
+        app:layout_constraintTop_toBottomOf="@+id/titleMaterias" />
 
     <Spinner
         android:id="@+id/listLlamados"
-        android:layout_width="157dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="36dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:entries="@array/spinner_llamados"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/listMaterias" />
 
     <TextView
         android:id="@+id/Descripcion"
-        android:layout_width="327dp"
-        android:layout_height="104dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Datos de la inscripción"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listLlamados"
-        app:layout_constraintVertical_bias="0.345"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/listLlamados" />
 
     <Button
         android:id="@+id/buttonSend"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/blue"
         android:text="Enviar incripción"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Descripcion" />
 
     <Button
         android:id="@+id/btnVolInicio"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/blue"
         android:text="Volver a la pagina inicio"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSend" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
