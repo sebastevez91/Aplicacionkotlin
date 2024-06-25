@@ -5,6 +5,27 @@
     android:id="@+id/RegistroActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fondoPantalla"
     tools:context=".Registro">
 
+    <TextView
+        android:id="@+id/TitleEmer"
+        android:layout_width="339dp"
+        android:layout_height="125dp"
+        android:text="Por el momento no se puede registrar nuevos usuarios"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Volver a la pagina Inicio"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="603dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

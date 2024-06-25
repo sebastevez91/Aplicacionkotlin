@@ -3,64 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/orange"
+    android:background="@mipmap/fondoPantalla"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InscriptionActivity">
 
     <TextView
+        android:id="@+id/idTitleInsc"
+        android:layout_width="259dp"
+        android:layout_height="42dp"
+        android:text="Inscripción a examen"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <TextView
         android:id="@+id/titleMaterias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:text="Lista de materias"
-        android:textColor="@color/black"
+        android:text="Lista de materias:"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="135dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LLamados"
-        android:textColor="@color/black"
+        android:text="LLamados:"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="200dp" />
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="203dp" />
 
     <Spinner
         android:id="@+id/listMaterias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="38dp"
         android:entries="@array/spinner_materias"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toEndOf="@+id/titleMaterias"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="111dp" />
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="135dp" />
 
     <Spinner
         android:id="@+id/listLlamados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="504dp"
+        android:layout_width="176dp"
+        android:layout_height="37dp"
         android:entries="@array/spinner_llamados"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toEndOf="@+id/textView2" />
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="203dp" />
 
     <TextView
         android:id="@+id/Descripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="115dp"
         android:layout_marginBottom="68dp"
         android:text="Datos de la inscripción"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,9 +77,9 @@
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/blue"
         android:text="Enviar incripción"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,4 +87,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Descripcion" />
 
+    <Button
+        android:id="@+id/btnVolInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Volver a la pagina inicio"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="625dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

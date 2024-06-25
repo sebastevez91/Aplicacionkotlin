@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/white"
+    android:background="@mipmap/fondoPantalla"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,23 +11,23 @@
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
+
     <ImageView
         android:id="@+id/coverImageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="389dp"
+        android:layout_height="336dp"
         android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-
-        app:srcCompat="@mipmap/aire" />
-
+        app:srcCompat="@mipmap/logo" />
 
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre de usuario"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:minWidth="200dp"
         android:minHeight="48dp"
@@ -42,6 +42,7 @@
         android:minHeight="48dp"
         android:minWidth="200dp"
         android:hint="Contraseña"
+        android:textColorHint="@color/white"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:importantForAutofill="no"
@@ -51,8 +52,9 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/blue"
         android:textColor="@color/white"
+        android:textSize="20sp"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:text="Iniciar sesión"
@@ -65,7 +67,8 @@
         android:autoLink="web"
         android:text="Olvidaste la contraseña"
         android:textAlignment="center"
-        android:textColor="@color/blue" />
+        android:textStyle="bold"
+        android:textColor="@color/red" />
 
     <TextView
         android:id="@+id/resultTextView"
@@ -74,24 +77,26 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textColor="@android:color/black"
-        android:textStyle="bold" />
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        />
 
     <TextView
         android:id="@+id/linkRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/blue"
+        android:textColor="@color/red"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:text="Ahh no estas registrado!!! Registrate aqui"
         android:autoLink="web" />
 
     <CheckBox
         android:id="@+id/checkboxSession"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="376dp"
+        android:layout_height="71dp"
         android:text="Mantener la sesión abierta"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

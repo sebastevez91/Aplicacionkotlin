@@ -5,6 +5,71 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fondoPantalla"
     tools:context=".PaisesActivity">
 
+    <TextView
+        android:id="@+id/idTittleApi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paises del mundo"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <TextView
+        android:id="@+id/idTitlePais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paises:"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <Spinner
+        android:id="@+id/listPaises"
+        android:layout_width="218dp"
+        android:layout_height="35dp"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <TextView
+        android:id="@+id/idTitleCapitales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capital:"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <Spinner
+        android:id="@+id/listCapitales"
+        android:layout_width="218dp"
+        android:layout_height="35dp"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <TextView
+        android:id="@+id/infoPais"
+        android:layout_width="347dp"
+        android:layout_height="224dp"
+        android:text="Información: "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <Button
+        android:id="@+id/btnVolverInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="Volver a la pagina inicio"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="625dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

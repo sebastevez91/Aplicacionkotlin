@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
 
     // Datos de ejemplo para validar
-    private val correctUsername = "andres"
+    val correctUsername = "andres"
     private val correctPassword = "456"
 
 

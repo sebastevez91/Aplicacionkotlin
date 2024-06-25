@@ -9,6 +9,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -35,6 +36,7 @@ class InscriptionActivity : AppCompatActivity() {
         var spinnerLlamados = findViewById<Spinner>(R.id.listLlamados)
         val descripcion = findViewById<TextView>(R.id.Descripcion)
         val sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
 
         buttonSend.setOnClickListener {
             val materiaInscription =

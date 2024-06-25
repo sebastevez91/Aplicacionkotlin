@@ -15,6 +15,7 @@ import androidx.core.view.isEmpty
 import java.util.Calendar
 
 class PerfilActivity : AppCompatActivity() {
+    private lateinit var etDate:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,24 +27,33 @@ class PerfilActivity : AppCompatActivity() {
         }
         val nombre = findViewById<EditText>(R.id.Nombre)
         val apellido = findViewById<EditText>(R.id.Apellido)
-        val fechaNac = findViewById<DatePicker>(R.id.FechaNacimiento)
         val tipoDni = findViewById<Spinner>(R.id.TipoDni)
         val numDni = findViewById<EditText>(R.id.numDni)
         val btnGuardar = findViewById<Button>(R.id.BtnGuardar)
-        val etDate = findViewById<EditText>(R.id.etDate)
+        etDate = findViewById(R.id.etDate)
 
         etDate.setOnClickListener {
             showDateNacimiento()
         }
         btnGuardar.setOnClickListener {
+            val name:String = nombre.text.toString()
+            val surname:String = apellido.text.toString()
+            val fechaNac:String = etDate.text.toString()
+            val tpDni:String = tipoDni.selectedItem.toString()
+            val numeroDni = numDni.text.toString()
 
+            VerificaDatos(name,surname,fechaNac,tpDni,numeroDni)
         }
     }
-    /*private fun VerificaDatos(name:String,surname:String,fNac:DatePicker,tipo:String,numDni:Int){
-        if(name.isEmpty() || surname.isEmpty() || fNac.isEmpty() || tipo.isEmpty() || numDni == 0 ){
+    private fun VerificaDatos(name:String,surname:String,fNac:String,tpDni:String,numDni:String){
+        if(name.isEmpty() || surname.isEmpty() || fNac.isEmpty() || tpDni.isEmpty() || numDni.isEmpty() ){
             showToast("Debes completar los campos.")
-        }else if ()
-    }*/
+        }else if (numDni.length < 8){
+            showToast("Debes poner un número de DNI")
+        }else{
+            showToast("Actualización exitosa!!!")
+        }
+    }
     private fun showDateNacimiento(){
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
