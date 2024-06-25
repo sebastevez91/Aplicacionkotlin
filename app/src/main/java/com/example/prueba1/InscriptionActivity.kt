@@ -21,7 +21,7 @@ import com.example.prueba1.R.id.buttonSend
 
 class InscriptionActivity : AppCompatActivity() {
     private lateinit var buttonSend: Button
-
+    private lateinit var buttonVolver: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -32,11 +32,17 @@ class InscriptionActivity : AppCompatActivity() {
             insets
         }
         buttonSend = findViewById(R.id.buttonSend)
+        buttonVolver = findViewById(R.id.btnVolInicio)
         var spinnerMaterias = findViewById<Spinner>(R.id.listMaterias)
         var spinnerLlamados = findViewById<Spinner>(R.id.listLlamados)
         val descripcion = findViewById<TextView>(R.id.Descripcion)
         val sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)
 
+        buttonVolver.setOnClickListener{
+            val intent = Intent(this@InscriptionActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         buttonSend.setOnClickListener {
             val materiaInscription =

@@ -8,6 +8,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.ScrollCaptureSession
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.view.WindowInsetsCompat
@@ -21,7 +22,7 @@ import com.google.android.material.navigation.NavigationView
 
 class PrincipalActivity : AppCompatActivity() {
     private lateinit var menuMain: NavigationView
-
+    private lateinit var buttonVolver: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +34,17 @@ class PrincipalActivity : AppCompatActivity() {
             insets
         }
 
+        buttonVolver = findViewById(R.id.btnVolverInicio)
         val userSession = findViewById<TextView>(R.id.idInfoStudent)
         //userSession.text = "Tu nombre de usuario: ${}"
 
+        buttonVolver.setOnClickListener{
+            val intent = Intent(this@PrincipalActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         menuMain = findViewById(R.id.idMenuMain)
+
         menuMain.setNavigationItemSelectedListener { Item ->
             when (Item.itemId) {
                 R.id.menu_inscripciones -> {

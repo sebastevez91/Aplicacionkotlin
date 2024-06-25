@@ -1,8 +1,14 @@
 package com.example.prueba1
 
+import com.google.gson.annotations.SerializedName
+import retrofit2.http.Path
+
 data class Country(
+    @Path("name")
     val name: String,
+    @Path("capital")
     val capital: String,
-    val population: Int,
-    // Agrega más propiedades según tus necesidades
+    @Path("population")
+    val population: Int
 )
+

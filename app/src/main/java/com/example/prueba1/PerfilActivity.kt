@@ -1,6 +1,7 @@
 package com.example.prueba1
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.DatePicker
@@ -16,6 +17,7 @@ import java.util.Calendar
 
 class PerfilActivity : AppCompatActivity() {
     private lateinit var etDate:EditText
+    private lateinit var buttonVolver: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,6 +33,13 @@ class PerfilActivity : AppCompatActivity() {
         val numDni = findViewById<EditText>(R.id.numDni)
         val btnGuardar = findViewById<Button>(R.id.BtnGuardar)
         etDate = findViewById(R.id.etDate)
+        buttonVolver = findViewById(R.id.btnVolverInicio)
+
+        buttonVolver.setOnClickListener{
+            val intent = Intent(this@PerfilActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         etDate.setOnClickListener {
             showDateNacimiento()
