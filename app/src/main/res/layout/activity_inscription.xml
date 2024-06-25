@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@mipmap/fondoPantalla"
+    android:background=""
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InscriptionActivity">
@@ -59,8 +59,8 @@
 
     <TextView
         android:id="@+id/Descripcion"
-        android:layout_width="362dp"
-        android:layout_height="115dp"
+        android:layout_width="327dp"
+        android:layout_height="104dp"
         android:layout_marginBottom="68dp"
         android:text="Datos de la inscripción"
         android:textColor="@color/white"
