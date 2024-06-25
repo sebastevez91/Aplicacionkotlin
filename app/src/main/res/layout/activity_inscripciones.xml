@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InscripcionesActivity"
-    android:background="@color/blue">
+    android:background="@mipmap/fondokotlin">
 
 
     <TextView
@@ -18,16 +18,19 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="50dp" />
+        app:layout_constraintBottom_toTopOf="@+id/listIncripciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listIncripciones"
         android:layout_width="364dp"
         android:layout_height="434dp"
         android:cacheColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="128dp" />
 
     <Button
@@ -38,6 +41,8 @@
         android:text="Volver a la pagina inicio"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="625dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listIncripciones" />
 </androidx.constraintlayout.widget.ConstraintLayout>

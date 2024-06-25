@@ -34,7 +34,7 @@ class PrincipalActivity : AppCompatActivity() {
         }
 
         val userSession = findViewById<TextView>(R.id.idInfoStudent)
-        userSession.text = "Tu nombre de usuario: ${}"
+        //userSession.text = "Tu nombre de usuario: ${}"
 
         menuMain = findViewById(R.id.idMenuMain)
         menuMain.setNavigationItemSelectedListener { Item ->

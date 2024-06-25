@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background=""
+    android:background="@mipmap/fondokotlin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InscriptionActivity">
@@ -12,23 +12,29 @@
         android:id="@+id/idTitleInsc"
         android:layout_width="259dp"
         android:layout_height="42dp"
+        android:layout_marginTop="48dp"
         android:text="Inscripción a examen"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="66dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleMaterias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:text="Lista de materias:"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="135dp" />
+        app:layout_constraintEnd_toStartOf="@+id/listMaterias"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitleInsc" />
 
     <TextView
         android:id="@+id/textView2"
@@ -37,25 +43,32 @@
         android:text="LLamados:"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Descripcion"
+        app:layout_constraintEnd_toStartOf="@+id/listLlamados"
+        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMaterias"
+        app:layout_constraintVertical_bias="0.245" />
 
     <Spinner
         android:id="@+id/listMaterias"
-        android:layout_width="176dp"
-        android:layout_height="38dp"
+        android:layout_width="156dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="36dp"
         android:entries="@array/spinner_materias"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="204dp"
         tools:layout_editor_absoluteY="135dp" />
 
     <Spinner
         android:id="@+id/listLlamados"
-        android:layout_width="176dp"
-        android:layout_height="37dp"
+        android:layout_width="157dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
         android:entries="@array/spinner_llamados"
-        tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="203dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listMaterias" />
 
     <TextView
         android:id="@+id/Descripcion"
@@ -70,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listLlamados"
-        app:layout_constraintVertical_bias="0.168"
+        app:layout_constraintVertical_bias="0.345"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -95,6 +108,8 @@
         android:text="Volver a la pagina inicio"
         android:textColor="@color/white"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="625dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSend" />
 </androidx.constraintlayout.widget.ConstraintLayout>

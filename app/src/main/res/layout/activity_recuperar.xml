@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/RecuperarActivity"
-    android:background="@mipmap/fondoPantalla"
+    android:background="@mipmap/fondokotlin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RecuperarActivity">
@@ -13,42 +13,44 @@
         android:id="@+id/imageView"
         android:layout_width="234dp"
         android:layout_height="239dp"
-        android:layout_marginTop="48dp"
         android:src="@mipmap/contra"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065" />
 
     <TextView
         android:id="@+id/titleRecuperar"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="44dp"
         android:text="Recuperar Contraseña"
         android:textAlignment="center"
-        android:textSize="@dimen/textTitulo"
         android:textColor="@color/white"
+        android:textSize="@dimen/textTitulo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.06" />
 
     <EditText
         android:id="@+id/EmailUser"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:hint="Introduce tu email"
-        android:textColorHint="@color/white"
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleRecuperar"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <Button
         android:id="@+id/btnRecuperar"
@@ -59,10 +61,12 @@
         android:text="Enviar correo"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EmailUser" />
+        app:layout_constraintTop_toBottomOf="@+id/EmailUser"
+        app:layout_constraintVertical_bias="0.045" />
 
     <Button
         android:id="@+id/btnVolver"
@@ -73,9 +77,11 @@
         android:text="Volver inicio"
         android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRecuperar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRecuperar"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

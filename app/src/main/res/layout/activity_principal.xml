@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="@mipmap/fondoPantalla"
+    android:background="@mipmap/fondokotlin"
     tools:context=".PrincipalActivity">
 
 
@@ -15,13 +15,14 @@
         android:id="@+id/idTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:text="Bienvenido a la School App"
-        android:textSize="20sp"
         android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164" />
 
     <TextView
         android:id="@+id/idInfoStudent"
