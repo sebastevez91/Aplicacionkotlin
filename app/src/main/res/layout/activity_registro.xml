@@ -28,6 +28,7 @@
         android:backgroundTint="@color/blue"
         android:text="Volver a la pagina Inicio"
         android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
