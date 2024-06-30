@@ -35,7 +35,7 @@ class PerfilActivity : AppCompatActivity() {
         etDate = findViewById(R.id.etDate)
         buttonVolver = findViewById(R.id.btnVolverInicio)
 
-        buttonVolver.setOnClickListener{
+        buttonVolver.setOnClickListener {
             val intent = Intent(this@PerfilActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
@@ -45,15 +45,16 @@ class PerfilActivity : AppCompatActivity() {
             showDateNacimiento()
         }
         btnGuardar.setOnClickListener {
-            val name:String = nombre.text.toString()
-            val surname:String = apellido.text.toString()
-            val fechaNac:String = etDate.text.toString()
-            val tpDni:String = tipoDni.selectedItem.toString()
+            val name: String = nombre.text.toString()
+            val surname: String = apellido.text.toString()
+            val fechaNac: String = etDate.text.toString()
+            val tpDni: String = tipoDni.selectedItem.toString()
             val numeroDni = numDni.text.toString()
 
-            VerificaDatos(name,surname,fechaNac,tpDni,numeroDni)
+            VerificaDatos(name, surname, fechaNac, tpDni, numeroDni)
         }
     }
+    // Método que valida los datos ingresados
     private fun VerificaDatos(name:String,surname:String,fNac:String,tpDni:String,numDni:String){
         if(name.isEmpty() || surname.isEmpty() || fNac.isEmpty() || tpDni.isEmpty() || numDni.isEmpty() ){
             showToast("Debes completar los campos.")
@@ -61,14 +62,21 @@ class PerfilActivity : AppCompatActivity() {
             showToast("Debes poner un número de DNI")
         }else{
             showToast("Actualización exitosa!!!")
+            val intent = Intent(this@PerfilActivity, PrincipalActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
     private fun showDateNacimiento(){
+        // Creamos una instancia de la clase Calendar utilizando el método estático getInstance()
         val calendar = Calendar.getInstance()
+        //  Obtenemos el año actual utilizando el método get(Calendar.YEAR)
         val year = calendar.get(Calendar.YEAR)
+        // Obtenemos el mes actual (0-11, donde 0 es enero) utilizando el método get(Calendar.MONTH).
         val month = calendar.get(Calendar.MONTH)
+        // Obtenemos el día del mes actual utilizando el método get(Calendar.DAY_OF_MONTH).
         val day = calendar.get(Calendar.DAY_OF_MONTH)
-
+        // Creamos un diálogo de selección de fecha
         val datePicker = DatePickerDialog(
             this,{ _, selectedYear, selectedMonth, selectedDay ->
                 val formattedDate = "${selectedDay}/${selectedMonth + 1}/${selectedYear}"

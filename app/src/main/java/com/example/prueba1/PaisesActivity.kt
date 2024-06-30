@@ -42,22 +42,29 @@ class PaisesActivity : AppCompatActivity() {
     }
 
     private fun fetchCountriesData(country: String) {
+        // Intanciamos la API, llamando a la clase interface CountriesApiService
         val api = RetrofitClient.retrofit.create(CountriesApiService::class.java)
+        // Llamamos al método getCountryinfo() que esta dentro de la interface
         val call = api.getCountryInfo(country)
 
+        //Estamos configurando una llamada asíncrona a la API utilizando Retrofit
         call.enqueue(object : Callback<List<Country>>{
+            // Esto se ejecutará cuando la respuesta de la API sea exitosa
             override fun onResponse(call: Call<List<Country>>, response: Response<List<Country>>){
                 if(response.isSuccessful && response.body()?.isNotEmpty() == true){
+                    // Si la respuesta fue exitosa y no está vacía
                     val countryInfo = response.body()!![0]
                     val capital = countryInfo.capital?.firstOrNull() ?: "Capital no encontrada"
+                    // Actualizando la vista de texto
                     capitalTextView.text = "Capital: $capital"
                     populationTextView.text = "Población: ${countryInfo.population}"
                 }else{
+                    // Actualizando la vista de texto
                     capitalTextView.text = "No data available"
                     populationTextView.text = ""
                 }
             }
-
+            // Esto se ejecutará cuando la respuesta de la API no sea exitosa
             override fun onFailure(call: Call<List<Country>>, t: Throwable){
                 capitalTextView.text = "Error: ${t.message}"
                 populationTextView.text = ""

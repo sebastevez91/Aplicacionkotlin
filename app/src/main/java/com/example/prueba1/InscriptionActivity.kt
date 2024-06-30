@@ -22,6 +22,8 @@ import com.example.prueba1.R.id.buttonSend
 class InscriptionActivity : AppCompatActivity() {
     private lateinit var buttonSend: Button
     private lateinit var buttonVolver: Button
+    private lateinit var sherePrefe: SherePreference
+    private val itemList: MutableList<String> = mutableListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -36,6 +38,7 @@ class InscriptionActivity : AppCompatActivity() {
         var spinnerMaterias = findViewById<Spinner>(R.id.listMaterias)
         var spinnerLlamados = findViewById<Spinner>(R.id.listLlamados)
         val descripcion = findViewById<TextView>(R.id.Descripcion)
+        sherePrefe = SherePreference(this)
         val sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)
 
         buttonVolver.setOnClickListener{
@@ -45,16 +48,29 @@ class InscriptionActivity : AppCompatActivity() {
         }
 
         buttonSend.setOnClickListener {
+            // Guardo la informacón de la inscripción en una variable.
             val materiaInscription =
                 "Nombre de materia: ${spinnerMaterias.selectedItem}, inscripto para el ${spinnerLlamados.selectedItem} ."
+            // Le mostramos al usuario la información
             descripcion.text = materiaInscription
-            showToast("Inscripción enviada al correo de la Institución.")
+            // Esta línea de código guarda una cadena con la clave "Nueva inscripcion. " y el valor de materiaInscription en las SharedPreferences
             sharedPref.edit().putString("Nueva inscripcion. ", materiaInscription).apply()
+            // Le permitimos enviar la inscripción por correo
             MailSend(materiaInscription)
+            // Almacenamos la incripción
+            val newItem = materiaInscription
+            if (newItem.isNotEmpty()) {
+                // Agregar el nuevo elemento a la lista
+                itemList.add(newItem)
+                // Guardar la lista actualizada en SharedPreferences
+                sherePrefe.saveList("Inscripción", itemList)
+            }
+            //Mostramos un mensaje
+            showToast("Inscripción enviada al correo de la Institución.")
         }
 
     }
-
+    // Método que usamos para preguntarle al usuario que aplicación quiere usar para enviar correo
     private fun MailSend(messageInscription : String){
         val to = "schoolembensema@gmail.com"
         val subject = "Inscripción"

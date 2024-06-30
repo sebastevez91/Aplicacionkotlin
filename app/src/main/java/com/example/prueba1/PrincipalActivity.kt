@@ -36,7 +36,6 @@ class PrincipalActivity : AppCompatActivity() {
 
         buttonVolver = findViewById(R.id.btnVolverInicio)
         val userSession = findViewById<TextView>(R.id.idInfoStudent)
-        //userSession.text = "Tu nombre de usuario: ${}"
 
         buttonVolver.setOnClickListener{
             val intent = Intent(this@PrincipalActivity, MainActivity::class.java)
@@ -45,6 +44,7 @@ class PrincipalActivity : AppCompatActivity() {
         }
         menuMain = findViewById(R.id.idMenuMain)
 
+        // Configuración del Navigation View
         menuMain.setNavigationItemSelectedListener { Item ->
             when (Item.itemId) {
                 R.id.menu_inscripciones -> {
